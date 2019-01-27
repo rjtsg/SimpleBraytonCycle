@@ -63,6 +63,8 @@ m4 = m3 + mf
 Pt4 = cpr*Pt3
 
 ## High pressure Turbine ##
+Whpc = m25*Cpair*(Tt3-Tt25)
+Tt45 = Tt4 - Whpc/(n_me*m4*Cpgas)
 
 ##Print Values##
 print('-'*40)
@@ -89,6 +91,8 @@ print('Pt4 = %.2f Pa' % Pt4)
 print('Tt4 = %.2f K' % Tt4)
 print('mf = %.2f kg/s and m4 = %.2f kg/s' %(mf,m4))
 print('*'*10 + 'HPT calculations' + '*'*10)
+print('Work done in HPC: Whpc = %.2f MW' % Whpc)
+print('Tt45 = %.2f K' % Tt45)
 
 ### exit the program
 input('Press ENTER to exit')
