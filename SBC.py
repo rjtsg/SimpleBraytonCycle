@@ -14,8 +14,8 @@ n_LPC = 0.90 #LPC isentropic efficiency
 n_HPC = 0.9 #HPC isentropic efficiency
 n_LPT = 0.92 #LPT isentropic efficiency
 n_HPT = 0.92 #HPT isentropic efficiency
-n_me = 0.99
-n_ce = 0.99
+n_me = 0.99 #Mechanical efficiency
+n_ce = 0.99 #combustion efficiency
 cpr = 0.96
 n_ne = 0.98
 Tamb = 216
@@ -62,6 +62,8 @@ mf = m3*Cpgas*(Tt4 - Tt3)/(n_ce*LHV)
 m4 = m3 + mf
 Pt4 = cpr*Pt3
 
+## High pressure Turbine ##
+
 ##Print Values##
 print('-'*40)
 print('Below the values for the Brayton cycle are given')
@@ -86,6 +88,7 @@ print('*'*10 + 'Combustion chamber calculations' + '*'*10)
 print('Pt4 = %.2f Pa' % Pt4)
 print('Tt4 = %.2f K' % Tt4)
 print('mf = %.2f kg/s and m4 = %.2f kg/s' %(mf,m4))
+print('*'*10 + 'HPT calculations' + '*'*10)
 
 ### exit the program
 input('Press ENTER to exit')
